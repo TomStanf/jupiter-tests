@@ -1,0 +1,22 @@
+{
+  "name": "jupiter-toys-automation",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:ci": "cross-env CI=true playwright test",
+    "test:headed": "playwright test --headed",
+    "report": "playwright show-report",
+    "lint": "tsc --noEmit",
+    "test:tc1": "playwright test -g \"TC1\"",
+    "test:tc2": "playwright test -g \"TC2\"",
+    "test:tc3": "playwright test -g \"TC3\"",
+    "test:tc2:x5": "playwright test -g \"TC2\" --repeat-each=5 --retries=0 --workers=1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "@types/node": "^20.14.0",
+    "cross-env": "^10.1.0",
+    "typescript": "^5.5.0"
+  }
+}
